@@ -24,7 +24,7 @@ classifier = pipeline("text-classification",
 def classify_emotions(text: str) -> dict:
     try:
         # Находим распредим вероятности эмоций
-        predictions = classifier(text)[0]
+        predictions = classifier(text.lower())[0]
         predictions = {emo['label']: emo['score'] for emo in predictions}
     except Exception:
         predictions = None
