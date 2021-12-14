@@ -16,13 +16,3 @@ def emotion_classification(text_body: str):
             'Error': 1,
             'description': 'Error during classification'
         }
-        
-
-# uvicorn main:app --host 127.0.0.1 --port 8000 --reload
-
-# docker build --no-cache -t emo-api .
-# docker images
-# docker run -t -p 8003:8080 emo-api
-
-# docker ps
-# docker builder prune -f
